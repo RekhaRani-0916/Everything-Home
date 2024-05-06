@@ -1,0 +1,39 @@
+.mobile-navgation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  height: 100%;
+  width: 250px;
+  z-index: 10;
+  padding: 25px;
+  background-color: $White;
+  transition: transform $fast-transition;
+
+  &.open {
+    transform: translateX(0);
+  }
+  @include breakpoint-up(medium) {
+    width: 350px;
+  }
+
+  .close-menu {
+    display: block;
+    margin-bottom: 55px;
+    cursor: pointer;
+  }
+
+  a {
+    display: block;
+    color: $Very-blue;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: $fast-transition;
+
+    &:hover {
+      padding-left: 10px;
+      color: $Dark-grayish-blue;
+    }
+  }
+}

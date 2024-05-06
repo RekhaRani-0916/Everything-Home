@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mohamed Aridah" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main Css File -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <a href="index.html" class="navbar-link"></a>
+  </head>
+  <body>
+    
+    <main class="main">
+      <section class="product-wrapper">
+        <div class="container">
+          <div class="product-images-wrapper">
+            <div class="preview-image-wrapper">
+              <img
+                src="https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=800"
+                class="preview-image"
+                alt="Product Image"
+              />
+              <div class="arrows hide-for-desktop">
+                <div class="next">
+                  <img src="./images/icon-next.svg" alt="Next Icon" />
+                </div>
+                <div class="prev">
+                  <img src="./images/icon-previous.svg" alt="Previous Icon" />
+                </div>
+              </div>
+              <div class="count">
+                <p>
+                  <span class="current"></span> of
+                  <span class="total"></span>
+                </p>
+              </div>
+            </div>
+
+            <div class="thumbs-wrapper hide-for-mobile">
+              <div class="thumb-image active">
+                <img
+                  src="https://images.unsplash.com/photo-1537726235470-8504e3beef77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                  alt="Product Thumb Image"
+                />
+              </div>
+              <div class="thumb-image">
+                <img
+                  src="https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                  alt="Product Thumb Image"
+                />
+              </div>
+              <div class="thumb-image">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1670359037486-41aa5e6594ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                  alt="Product Thumb Image"
+                />
+              </div>
+              <div class="thumb-image">
+                <img
+                  src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                  alt="Product Thumb Image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="product-details-wrapper">
+            <p class="product-brabd">Everthing Home</p>
+            <h1 class="product-title">New Apartment nice view</h1>
+            <p class="product-description">
+              Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood
+            </p>
+
+            <div class="product-price">
+              <div class="current-price-wrapper">
+                <h2 class="current-price">₹3490000</h2>
+            </div>
+
+            <form action="#" class="add-to-cart-form">
+              <button
+                type="submit"
+                aria-label="Add to cart"
+                class="button add-btn"
+              >
+                Contact Now
+              </button>
+
+              <p class="form-alert"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- LightBox -->
+    <div class="lightbox-wrapper">
+      <div class="lightbox-content"></div>
+    </div>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

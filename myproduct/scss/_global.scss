@@ -1,0 +1,96 @@
+*,
+*:before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  color: $Dark-grayish-blue;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+button,
+.button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  border-radius: $border-radius;
+  transition: $fast-transition;
+
+  &:focus-visible {
+    outline: 1px dashed $Dark-grayish-blue;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.container {
+  padding-right: 24px;
+  padding-left: 24px;
+
+  @include breakpoint-up(large) {
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none !important;
+  }
+}
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}

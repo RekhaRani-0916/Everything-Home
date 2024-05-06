@@ -1,0 +1,20 @@
+.product-wrapper {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    @include breakpoint-up(medium) {
+      padding: 90px 24px;
+    }
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+      gap: 120px;
+      padding: 90px 50px;
+    }
+  }
+}
+
+@import "./product-images-wrapper";
+@import "./product-details-wrapper";

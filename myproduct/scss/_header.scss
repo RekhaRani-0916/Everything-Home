@@ -1,0 +1,91 @@
+.header {
+  nav {
+    position: relative;
+    padding: 25px 0;
+
+    @include breakpoint-up(medium) {
+      border-bottom: 1px solid $Grayish-blue;
+    }
+
+    @include breakpoint-up(large) {
+      padding: 45px 0;
+    }
+  }
+
+  .toggle-menu {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  .main-navgation {
+    @include breakpoint-up(large) {
+      align-self: flex-start;
+      margin-left: 50px;
+
+      a {
+        position: relative;
+        font-size: 14px;
+        color: $Dark-grayish-blue;
+        margin-right: 33px;
+        transition: $fast-transition;
+
+        &:hover {
+          color: $Very-blue;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: -62px;
+          width: 100%;
+          height: 5px;
+          opacity: 0;
+          background-color: $Orange;
+          transition: $fast-transition;
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @import "./mobile-navgation";
+
+  .controls {
+    gap: 22px;
+
+    @include breakpoint-up(large) {
+      gap: 40px;
+    }
+  }
+
+  .user-avater {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: $fast-transition;
+
+    @include breakpoint-up(large) {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:hover {
+      border-color: $Orange;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@import "./cart";

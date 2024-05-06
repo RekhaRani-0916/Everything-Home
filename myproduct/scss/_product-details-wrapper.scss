@@ -1,0 +1,143 @@
+.product-details-wrapper {
+  padding: 24px;
+  font-weight: 700;
+
+  @include breakpoint-up(medium) {
+    padding: 45px 0;
+  }
+  @include breakpoint-up(large) {
+    padding: 65px 0;
+  }
+
+  .product-brabd {
+    font-size: 14px;
+    color: $Orange;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .product-title {
+    margin-bottom: 25px;
+    color: $Very-blue;
+    font-size: 35px;
+    line-height: 1.1;
+
+    @include breakpoint-up(large) {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .product-description {
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+
+  .current-price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    .current-price {
+      color: $Very-blue;
+      font-size: 30px;
+    }
+
+    .discount {
+      background: $Pale-orange;
+      color: $Orange;
+      padding: 5px 10px;
+      border-radius: $border-radius;
+    }
+  }
+
+  .previous-price-wrapper {
+    .previous-price {
+      color: $Grayish-blue;
+      text-decoration: line-through;
+      font-size: 17px;
+    }
+  }
+
+  .add-to-cart-form {
+    position: relative;
+    margin-top: 40px;
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &.alert {
+      .form-alert {
+        top: calc(100% + 10px);
+        opacity: 1;
+      }
+    }
+
+    .product-quantity {
+      flex-basis: 155px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $Very-blue;
+      padding: 15px 20px;
+      border-radius: $border-radius;
+      background-color: $Light-grayish-blue;
+    }
+
+    .product-quantity-num {
+      font-size: 17px;
+    }
+
+    .plus,
+    .minus {
+      cursor: pointer;
+      transition: $fast-transition;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .add-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 270px;
+      gap: 15px;
+      width: 100%;
+      color: $White;
+      padding: 15px 20px;
+      margin-top: 15px;
+      background-color: $Orange;
+      box-shadow: 0 15px 15px darken($color: $Pale-orange, $amount: 1%);
+
+      @include breakpoint-up(medium) {
+        margin-top: 0;
+      }
+
+      img {
+        filter: brightness(100);
+      }
+    }
+
+    .form-alert {
+      position: absolute;
+      top: calc(100% + 1px);
+      opacity: 0;
+      transition: $fast-transition;
+
+      &.success {
+        color: $Alert-Green;
+      }
+
+      &.fail {
+        color: $Alert-Red;
+      }
+    }
+  }
+}
